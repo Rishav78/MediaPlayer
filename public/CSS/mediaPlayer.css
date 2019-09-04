@@ -1,0 +1,77 @@
+body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+.container{
+    display: flex;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 100%;
+}
+.musicList{
+    flex: 1;
+}
+.musicList > div{
+    font-size: 18px;
+    padding: 8px 12px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    cursor: pointer;
+    transition: 0.2s;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    margin: 3px 5px;
+}
+.musicList > div:hover{
+    background-color: #333;
+    color: white;
+}
+.player{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 12px;
+    box-sizing: border-box;
+}
+.musicList{
+    border-right: 1px solid black;
+}
+.controller{
+    display: flex;
+    flex-direction: column;
+}
+.progress, .action{
+    display: flex;
+}
+.progress > div{
+    padding: 5px 8px;
+}
+.progressbar{
+    flex: 1;
+}
+.progressbar > input{
+    width: 100%;
+}
+.musicinfo{
+    flex: 1;
+}
+.action{
+    display: flex;
+}
+.action > div{
+    flex: 1;
+    padding: 5px 8px;
+    box-sizing: border-box;
+}
+.action span{
+    cursor: pointer;
+}
+.prevsong{
+    text-align: right;
+}
+.pauseandplay{
+    text-align: center;
+}
