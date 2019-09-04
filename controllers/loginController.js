@@ -11,6 +11,7 @@ function loginUser(req, res){
 }
 
 function serveLoginPage(req, res){
+    if(req.isAuthenticated()) return res.redirect('/mediaplayer');
     res.render('login');
 }
 

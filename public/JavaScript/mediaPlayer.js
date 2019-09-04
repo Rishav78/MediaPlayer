@@ -1,4 +1,4 @@
-(function(){
+// (function(){
     function Node(value, prev=null, next=null) {
         this.value = value;
         this.next = next;
@@ -83,13 +83,13 @@
         $.post('/songs', {name: ''}, function(result, status){
             if(!result.success) return alert(result.msg);
             const { songs } = result;
-            songs.forEach(element => {
+            songs.forEach((element, index) => {
                 songsArray.push(element);
                 let div = document.createElement('div');
                 div.textContent = element.name;
                 div.onclick = () => {
                     activeSong = element;
-                    selectSong(element, songsArray.length)
+                    selectSong(index)
                 };
                 $('.musicList').append(div);
             });
@@ -97,12 +97,13 @@
     });
 
     function selectSong(index) {
+        console.log(index);
         stack = new Stack();
         queue = new Queue();
         for(let i=0;i<index;i++){
             stack.push(songsArray[i]);
         }
-        for(let j=index+1;j<songsArray.length;i++){
+        for(let i=index+1;i<songsArray.length;i++){
             queue.push(songsArray[i]);
         }
         getSong();
@@ -132,4 +133,4 @@
     document.querySelector('audio').onended = () => {
         next();
     }
-})();
+// })();

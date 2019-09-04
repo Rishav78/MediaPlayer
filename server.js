@@ -8,7 +8,8 @@ const passport = require('passport');
 const bodyParser = require('body-parser');
 const User = require('./models/user');
 const mongoose = require('./models/db');
-const port = 3000;
+const upload = require('express-fileupload');
+const port = 4000;
 
 app.use('/', express.static(path.join(__dirname, 'public', 'JavaScript')));
 app.use('/', express.static(path.join(__dirname, 'public', 'CSS')));
@@ -16,7 +17,7 @@ app.use('/', express.static(path.join(__dirname, 'public', 'CSS')));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
+app.use(upload());
 app.set('view engine', 'ejs');
 app.use(session({
     secret: 'vcaw34567ioo',

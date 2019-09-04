@@ -6,5 +6,6 @@ router.use('/login', require('./loginRoute'));
 router.use('/signup', require('./signupRoute'));
 router.use('/mediaplayer', require('./mediaPlayerRoute'));
 router.use('/songs', require('./songRoute'));
+router.use('/uploadsong', require('./uploadSongRoute'));
 
 module.exports = router;

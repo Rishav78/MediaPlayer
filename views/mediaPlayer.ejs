@@ -7,32 +7,31 @@
             audio{
                 width: 100%;
             }
+            .music{
+                display: flex;
+                flex-direction: column;
+            }
+            .musicList{
+                flex: 1;
+            }
         </style>
     </head>
     <body>
         <div class="container">
-            <div class="musicList">
+            <div class="music">
+                <div class="uploadmusic">
+                    <a href="/uploadsong">upload</a>
+                </div>
+                <div class="musicList">
+                </div>
             </div>
             <div class="player">
                 <div class="musicinfo">
-
+                    
                 </div>
                 <div class="controller">
                     <div class="progress">
                         <audio controls src="" />
-                        <!-- <div class="completed">
-                            30
-                        </div>
-                        <div class="progressbar">
-                            <input type="range"
-                            max="100"
-                            min="0"
-                            value="0"
-                            >
-                        </div>
-                        <div class="left">
-                            40
-                        </div> -->
                     </div>
                     <div class="action">
                         <div class="prevsong">
