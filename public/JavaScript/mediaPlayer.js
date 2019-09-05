@@ -133,4 +133,15 @@
     document.querySelector('audio').onended = () => {
         next();
     }
+    $('.prevsong > span').click(function(){
+        prev();
+    })
+    $('.nextsong > span').click(function(){
+        next();
+    })
+    $('.pauseandplay > span').click(function(){
+        let audio = document.querySelector('audio');
+        if(audio.paused) audio.play();
+        else audio.pause();
+    })
 // })();
